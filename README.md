@@ -23,7 +23,7 @@ Pre-computed results from the paper's full runs are already in `paper_artifacts/
 
 ---
 
-## Quick start (smoke test — ~60 seconds, no full data needed)
+## Quick start
 
 The sample data committed here (5 IHDP files, 3 ACIC pairs) is enough to verify the environment is correctly set up.
 
@@ -62,7 +62,7 @@ The smoke test exercises the full pipeline in order:
 
 **IHDP 500 replications (~81 MB)**
 
-Download the standard IHDP `.npz` files from the [CFRNet repository](https://github.com/clinicalml/cfrnet) and convert to per-replication CSVs, or obtain `data/ihdp_sims_subset_500/` directly from the authors. Place all `ihdp_sim_001.csv` … `ihdp_sim_500.csv` into `data/ihdp_sims_subset_500/`.
+Dataset reproduction requires simulations from the `NCPI` R package.
 
 **ACIC 2018 (~3.5 GB)**
 
@@ -79,8 +79,6 @@ python trace_batch_runner.py \
     --ihdp-n-selected-features-output 4 \
     --out-root interp_runs_ihdp_q05_w128_out4
 ```
-
-Each run takes 1–4 minutes on CPU; use `--python path/to/faster/python` if you have a GPU env.
 
 ### Step 2: CNRN — train on ACIC
 
@@ -122,7 +120,7 @@ Get-ChildItem interp_runs_ihdp_q05_w128_out4 -Directory | ForEach-Object {
 }
 ```
 
-### Step 6: Aggregate results → paper tables
+### Step 6: Aggregate results for tables
 
 ```bash
 python finalize_paper_artifacts.py
@@ -221,6 +219,6 @@ Python **3.9.x or 3.10.x** is required (`torchlogic` is incompatible with Python
 @article{cnrn2025,
   title={Causal Neural Reasoning Networks: Neuro-Symbolic Causal Inference},
   author={Kevin O'Connor},
-  year={2025}
+  year={2026}
 }
 ```
