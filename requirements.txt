@@ -1,0 +1,15 @@
+# Core ML / numeric
+torch>=2.0.0
+numpy>=1.25.0
+pandas>=2.0.2
+scipy>=1.10.1
+scikit-learn>=1.2.2
+
+# Optimizer used by NRN trainers
+pytorch_optimizer>=2.12.0
+
+# Parallel / serialization
+joblib
+
+# CausalForest baseline
+econml>=0.15.0

@@ -1,0 +1,52 @@
+# ── Python ──────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ── Virtual environments ─────────────────────────────────────────────────────
+venv/
+.venv/
+env/
+
+# ── Data: full sets are too large for GitHub (81 MB IHDP, 3.5 GB ACIC) ──────
+# Ignore all CSVs in the data folders by default …
+data/ihdp_sims_subset_500/*.csv
+data/acic_2018/*.csv
+
+# … but keep the 5 IHDP sample files and 3 ACIC sample pairs
+!data/ihdp_sims_subset_500/ihdp_sim_001.csv
+!data/ihdp_sims_subset_500/ihdp_sim_003.csv
+!data/ihdp_sims_subset_500/ihdp_sim_004.csv
+!data/ihdp_sims_subset_500/ihdp_sim_007.csv
+!data/ihdp_sims_subset_500/ihdp_sim_008.csv
+
+!data/acic_2018/00448c593936474a8407c298a63f5b58.csv
+!data/acic_2018/00448c593936474a8407c298a63f5b58_cf.csv
+!data/acic_2018/004f739a303d480b80f90242d6d2cb06.csv
+!data/acic_2018/004f739a303d480b80f90242d6d2cb06_cf.csv
+!data/acic_2018/0052145a852c4ba2be2b8ae8a793e157.csv
+!data/acic_2018/0052145a852c4ba2be2b8ae8a793e157_cf.csv
+
+# ── Run outputs (generated, not source) ─────────────────────────────────────
+interp_runs*/
+tarnet/runs/
+baselines/causal_forest/runs/
+logs/
+paper_artifacts/
+
+# ── Serialized models ────────────────────────────────────────────────────────
+*.joblib
+*.pkl
+*.pt
+*.pth
+
+# ── IDE / OS ─────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
